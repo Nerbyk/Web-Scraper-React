@@ -11,8 +11,8 @@ export const AppProvider = ({ children }) => {
   const [dataSpinner, setDataSpinner] = useState(false)
   const [parsing, setParsing] = useState(false)
   const [parsingAlert, setParsingAlert] = useState(false)
-  const [parsingLog, setParsingLog] = useState('')
-  const [searchResult, setSearchResult] = useState('')
+  const [parsingLog, setParsingLog] = useState("")
+  const [searchResult, setSearchResult] = useState("")
 
   return (
     <AppContext.Provider
@@ -31,8 +31,10 @@ export const AppProvider = ({ children }) => {
         setParsing,
         parsingAlert,
         setParsingAlert,
-        parsingLog, setParsingLog,
-        searchResult, setSearchResult,
+        parsingLog,
+        setParsingLog,
+        searchResult,
+        setSearchResult,
       }}
     >
       {children}

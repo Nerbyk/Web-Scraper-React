@@ -1,6 +1,5 @@
 import React from "react"
 
 export const Check = () => {
-  
-  return (<div>Check</div>)
+  return <div>Check</div>
 }

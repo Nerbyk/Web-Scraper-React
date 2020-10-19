@@ -29,7 +29,7 @@ export const Scrape = () => {
     setMenuSpinner,
     setMenuStep,
     setParsingLog,
-    setParsingAlert
+    setParsingAlert,
   } = useApp()
 
   const handleSelect = (e) => {
@@ -62,33 +62,38 @@ export const Scrape = () => {
       }))
     }
   }, [scraper.name, scraper.type, scraper.categories])
-  
+
   const unwrap = ({ url, title }) => ({ url, title })
   const handleButtonClick = (e) => {
     setMenuStep("scrapping")
     setParsing(true)
     axios
       .post(
-        process.env.REACT_APP_API_URL + '/parse',
+        process.env.REACT_APP_API_URL + "/parse",
         {
-            type: scraper.type,
-            name: scraper.name,
-            data_format: process.env.REACT_APP_DATA_FORMAT,
-            category: unwrap(scraper.categories[scraper.category]),
-            sub_category: scraper.sub_category ? unwrap(scraper.categories[scraper.category].sub_categories[scraper.sub_category]) : ''
+          type: scraper.type,
+          name: scraper.name,
+          data_format: process.env.REACT_APP_DATA_FORMAT,
+          category: unwrap(scraper.categories[scraper.category]),
+          sub_category: scraper.sub_category
+            ? unwrap(
+                scraper.categories[scraper.category].sub_categories[
+                  scraper.sub_category
+                ]
+              )
+            : "",
         },
-        {withCredentials: true}
+        { withCredentials: true }
       )
-      .then(response => {
+      .then((response) => {
         setParsing(false)
         setParsingAlert(false)
         console.log(response)
-        if(response.status == 200){
-          setMenuStep('scrapping')
+        if (response.status == 200) {
+          setMenuStep("scrapping")
           setParsingLog(response.data.log)
-
         } else {
-          setMenuStep('scrapping')
+          setMenuStep("scrapping")
           setMenuAlert(true)
         }
       })
@@ -128,7 +133,10 @@ export const Scrape = () => {
     <div>
       <h3>New Web Scrape</h3>
       {menuAlert && (
-        <Alert variant='warning'> Something went wrong, Reload page and try again!</Alert>
+        <Alert variant="warning">
+          {" "}
+          Something went wrong, Reload page and try again!
+        </Alert>
       )}
       <Form>
         <FormGroup as={Col}>

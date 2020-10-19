@@ -7,7 +7,7 @@ import { Scrape } from "./Scrape"
 import { Scrapping } from "./Scrapping"
 
 export const Menu = () => {
-  const { menuStep, setMenuStep, setSearchResult} = useApp()
+  const { menuStep, setMenuStep, setSearchResult } = useApp()
 
   const handleButtonClick = (e) => {
     const { id } = e.target
@@ -28,23 +28,22 @@ export const Menu = () => {
 
   const handleShowData = () => {
     axios
-    .post(
-      process.env.REACT_APP_API_URL + "/search",
-      {
-        data_format: process.env.REACT_APP_DATA_FORMAT, 
-        sub_string: '', 
-        page: 1
-      },
-      { withCredentials: true }
-    )
-    .then((response) => {
-      if(response.status == 200){
-        setSearchResult(response.data.result)
-      } else {
-        
-      }
-    })
-    .catch((error) => Promise.reject(error))
+      .post(
+        process.env.REACT_APP_API_URL + "/search",
+        {
+          data_format: process.env.REACT_APP_DATA_FORMAT,
+          sub_string: "",
+          page: 1,
+        },
+        { withCredentials: true }
+      )
+      .then((response) => {
+        if (response.status == 200) {
+          setSearchResult(response.data.result)
+        } else {
+        }
+      })
+      .catch((error) => Promise.reject(error))
   }
   if (menuStep === "scrape") {
     return <Scrape />
