@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Web-Scraper-React/static/css/main.56679b15.chunk.css",
+    "main.js": "/Web-Scraper-React/static/js/main.9fc9dba1.chunk.js",
+    "main.js.map": "/Web-Scraper-React/static/js/main.9fc9dba1.chunk.js.map",
+    "runtime-main.js": "/Web-Scraper-React/static/js/runtime-main.95750849.js",
+    "runtime-main.js.map": "/Web-Scraper-React/static/js/runtime-main.95750849.js.map",
+    "static/js/2.47994c19.chunk.js": "/Web-Scraper-React/static/js/2.47994c19.chunk.js",
+    "static/js/2.47994c19.chunk.js.map": "/Web-Scraper-React/static/js/2.47994c19.chunk.js.map",
+    "index.html": "/Web-Scraper-React/index.html",
+    "precache-manifest.e887a7132b46c6ab24a078aa76ca576b.js": "/Web-Scraper-React/precache-manifest.e887a7132b46c6ab24a078aa76ca576b.js",
+    "service-worker.js": "/Web-Scraper-React/service-worker.js",
+    "static/css/main.56679b15.chunk.css.map": "/Web-Scraper-React/static/css/main.56679b15.chunk.css.map",
+    "static/js/2.47994c19.chunk.js.LICENSE.txt": "/Web-Scraper-React/static/js/2.47994c19.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.95750849.js",
+    "static/js/2.47994c19.chunk.js",
+    "static/css/main.56679b15.chunk.css",
+    "static/js/main.9fc9dba1.chunk.js"
+  ]
+}
